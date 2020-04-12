@@ -62,7 +62,7 @@ const ContactForm = props => {
                 type='text'
                 id='telephon'
                 name='telephon'
-                value={props.formData2.telephone}
+                value={props.formData2.telephon}
                 onChange={props.handleChange}
                 placeholder='Telephone'
               />
