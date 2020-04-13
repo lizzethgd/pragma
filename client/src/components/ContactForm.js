@@ -22,7 +22,7 @@ const ContactForm = props => {
       <main>
         <div className='main-wrapper'>
           <form onSubmit={handleSubmit}>
-            <div className='form-group'>
+            <div >
               <label htmlFor='firstName'>First Name</label>
               <input
                 id='firstName'
@@ -33,7 +33,7 @@ const ContactForm = props => {
                 placeholder='First name'
               />
             </div>
-            <div className='form-group'>
+            <div >
               <label htmlFor='lastName'>Last Name</label>
               <input
                 id='lastName'
@@ -44,7 +44,7 @@ const ContactForm = props => {
                 placeholder='Last name'
               />
             </div>
-            <div className='form-group'>
+            <div >
               <label htmlFor='companycountry'>Company</label>
               <input
                 id='company'
@@ -56,7 +56,7 @@ const ContactForm = props => {
               />
             </div>
 
-            <div className='form-group'>
+            <div >
               <label htmlFor='telephon'>Telephon</label>
               <input
                 type='text'
@@ -67,7 +67,7 @@ const ContactForm = props => {
                 placeholder='Telephone'
               />
             </div>
-            <div className='form-group'>
+            <div >
               <label htmlFor='email'>Email</label>
               <input
                 id='email'
