@@ -23,12 +23,12 @@ function getSingleStudent(req, res) {
 }*/
 
 function addContact(req, res) {
-  req.body.skills = req.body.skills.split(', ')
   const newContact = new Contact(req.body)
   newContact.save(err => {
     if (err) return res.status(404).send('Not found')
-    res.redirect('/contacts')
+    res.redirect('/contact_form')
   })
+  console.log('done')
 }
 
 /*

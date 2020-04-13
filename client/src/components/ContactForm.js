@@ -8,11 +8,11 @@ const ContactForm = props => {
     e.preventDefault()
     const formData2 = props.formData2
     const url = '/api/v1.0.0/contacts'
-    axios.contact(url, formData2).then(response => {
+    axios.post(url, formData2).then(response => {
       console.log(response)
       console.log('saved')
     })
-    props.addContect(formData2)
+    props.addContact(formData2)
     props.history.push('/contacts')
   }
 
@@ -52,7 +52,7 @@ const ContactForm = props => {
                 name='company'
                 value={props.formData2.company}
                 onChange={props.handleChange}
-                placeholder='Country'
+                placeholder='Company'
               />
             </div>
 

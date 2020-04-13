@@ -8,10 +8,10 @@ import Contact from './components/Contact'
 import Contacts from './components/Contacts'
 import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
-//import Students from './components/Students'
-//import StudentDetail from './components/StudentDetail'
-//import AddStudent from './components/AddStudent'
-//import EditStudent from './components/EditStudent'
+//import Posts from './components/Posts'
+//import PostDetail from './components/PostDetail'
+//import AddPost from './components/AddPost'
+//import EditPost from './components/EditPost'
 
 // AWS, Google cloud, Azure, Heroku, Digital Ocean, 
 
@@ -29,7 +29,7 @@ class App extends React.Component {
       firstName: '',
       lastName: '',
       company: '',
-      puhelin: '',
+      telephon: '',
       email: ''
     },
     editing: false,
@@ -40,8 +40,8 @@ class App extends React.Component {
   }
   handleChange = e => {
     const { name, value } = e.target
-    const formData1 = { ...this.state.formData1, [name]: value }
-    this.setState({ formData1 })
+    //const formData1 = { ...this.state.formData1, [name]: value }
+    //this.setState({ formData1 })
     const formData2 = { ...this.state.formData2, [name]: value }
     this.setState({ formData2 })
   }
@@ -66,6 +66,7 @@ class App extends React.Component {
       email: ''
     }
     this.setState({ formData2 })
+    console.log(this.state)
   }
 
 
@@ -77,6 +78,7 @@ class App extends React.Component {
       .get(url)
       .then(response => {
         this.setState({ contacts: response.data })
+        console.log(response)
       })
       .catch(err => {
         console.log(err.response.data)
@@ -86,14 +88,14 @@ class App extends React.Component {
 
   /*
 
-  editStudent = student => {
+  editPost = Post => {
     this.setState({ editing: true })
   }
-  updateStudent = formData => {
+  updatePost = formData => {
     this.setState({ formData, editing: false })
     this.fetchData()
   }
-  deleteStudent = () => {
+  deletePost = () => {
     this.fetchData()
   }
 
@@ -132,32 +134,32 @@ export default App
 
 <Route
             exact
-            path='/students/edit/:id'
+            path='/posts/edit/:id'
             render={props => (
-              <EditStudent
+              <Editpost
                 {...props}
                 handleChange={this.handleChange}
-                updateStudent={this.updateStudent}
+                updatePost={this.updatePost}
                 formData={formData}
-                students={students}
+                posts={posts}
               />
             )}
           />
 
           <Route
             exact
-            path='/students/:id'
+            path='/posts/:id'
             component={props => (
-              <StudentDetail
+              <PostDetail
                 {...props}
-                deleteStudent={this.deleteStudent}
-                editing={this.editStudent}
-                students={students}
+                deletePost={this.deletePost}
+                editing={this.editPost}
+                posts={posts}
               />
             )}
           />
           <Route
-            path='/students'
-            render={() => <Students students={students} />}
+            path='/posts'
+            render={() => <Posts posts={posts} />}
           />
           */

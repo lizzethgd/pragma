@@ -14,7 +14,7 @@ const Contacts = props => {
         <div key={contact._id} >
            <h4>{contact.firstName} {contact.lastName}</h4>
             <p>{contact.company}</p>
-            <p>{contact.telephone}</p>
+            <p>{contact.telephon}</p>
             <p>{contact.email}</p>
         </div>
       ))
@@ -24,7 +24,7 @@ const Contacts = props => {
 
   return (
     <>
-      <Header title='contacts' />
+      <Header title='Our Contacts' />
       <main>
         <div >
           <div >{renderContent}</div>

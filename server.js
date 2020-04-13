@@ -4,12 +4,12 @@ const PORT = process.env.PORT || 5000
 const mongoose = require('mongoose')
 const os = require('os')
 const fs = require('fs')
+const cors = require('cors')
 const bodyParser = require('body-parser')
 const Contact = require('./server/models/Contact')
 const { showDateTime } = require('./server/my_modules/my_modules.js')
 const Router = require('./server/routes/routes')
 const path = require('path')
-const cors = require('cors')
 
 const app = express()
 
@@ -37,7 +37,7 @@ mongoose.connect(
   }
 )
 
-/*
+
 // Middleware which run whenever the app is running
 app.use((req, res, next) => {
   const user = os.hostname
@@ -58,9 +58,10 @@ app.use(express.static(path.join(__dirname, '/client/build')))
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/client/build/index.html'))
-})*/
+})
 
-app.get('/api/v1.0.0/contacts', (req, res)=>{
+
+app.get('/api/v1.0.0/contacs', (req, res)=>{
   Contact.find({},(err, contacts)=>{
       if(err) return res.status(404).send('Not found')
       res.json(contacts)

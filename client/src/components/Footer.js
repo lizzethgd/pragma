@@ -5,10 +5,8 @@ const Footer = props => {
   return (
     <footer>
       <div >
-        <h3 >Pragmatic Inteligent Consulting App &copy; 2020</h3>
         <small>
-          HTML, CSS, JS, React, Node.js, Express, MongoDB and Mongoose are used
-          to build this web application
+        <b>Pragmatic Inteligent Consulting App &copy; 2020></b>
         </small>
       </div>
     </footer>
