@@ -30,3 +30,11 @@ let contacts=[
 ]
 
 //Contact.insertMany(contacts)
+
+
+/*//# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local*/
