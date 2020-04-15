@@ -61,12 +61,6 @@ app.get('*', (req, res) => {
 })
 
 
-app.get('/api/v1.0.0/contacs', (req, res)=>{
-  Contact.find({},(err, contacts)=>{
-      if(err) return res.status(404).send('Not found')
-      res.json(contacts)
-      })
-})
 
 // listen port
 app.listen(PORT, () => {

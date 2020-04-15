@@ -86,7 +86,7 @@ class App extends React.Component {
       })
   }
 
-  /*
+/*
 
   editPost = Post => {
     this.setState({ editing: true })
