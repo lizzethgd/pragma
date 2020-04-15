@@ -25,7 +25,7 @@ const Navbar = props => {
           <NavLink to='/contacts'>Contacts</NavLink>
         </li>
         <li>
-          <a href='https://pragmat.herokuapp.comheroku/api/v1.0.0/contacts'>API</a>
+          <a href='https://pragmat.herokuapp.com/api/v1.0.0/contacts'>API</a>
         </li>
       </ul>
     </div>
