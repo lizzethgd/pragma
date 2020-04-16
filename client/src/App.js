@@ -81,8 +81,8 @@ class App extends React.Component {
         console.log(response)
       })
       .catch(err => {
-        console.log(err.response.data)
-        this.setState({ err: err.response.data })
+        console.log(err)
+        this.setState({ err: err })
       })
   }
 
