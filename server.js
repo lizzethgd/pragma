@@ -37,6 +37,12 @@ mongoose.connect(
   }
 )
 
+app.get('/api/v1.0.0/students', (req, res)=>{
+  Student.find({},(err, students)=>{
+      if(err) return res.status(404).send('Not found')
+      res.json(students)
+      })
+})
 
 // Middleware which run whenever the app is running
 app.use((req, res, next) => {
