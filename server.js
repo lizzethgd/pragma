@@ -1,6 +1,6 @@
 require('dotenv').config()
 const express = require('express')
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 6000
 const mongoose = require('mongoose')
 const os = require('os')
 const fs = require('fs')
@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-// connect mongodb with the server
+// connect mongodb with the servergi
 mongoose.connect(
   process.env.MONGODB_URI,
   { useNewUrlParser: true, useUnifiedTopology: true },
@@ -37,12 +37,6 @@ mongoose.connect(
   }
 )
 
-app.get('/api/v1.0.0/students', (req, res)=>{
-  Student.find({},(err, students)=>{
-      if(err) return res.status(404).send('Not found')
-      res.json(students)
-      })
-})
 
 // Middleware which run whenever the app is running
 app.use((req, res, next) => {
